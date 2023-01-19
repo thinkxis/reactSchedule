@@ -5,9 +5,114 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a{text-decoration: none;cursor: pointer;}
+.divide { flex: 1 1 auto; }
+header{
+  height: 50px;
+  line-height: 50px;
+  background: #222222;
+  display: flex; align-items: center;
+  padding: 0 24px;
+  position: sticky; top: 0;
+}
+header ul{ list-style: none; padding: 0; margin: 0;}
+header ul li{ padding: 0; margin: 0;display: inline-block; margin: 0 8px; }
+header ul li a{ color: #ffffff; }
+header ul li a svg{ fill: #ffffff; height: 24px; vertical-align: middle; }
+header ul li a:hover{ color: #00bcd4; } 
+
+@media only screen and (max-width: 767px) { 
+  header ul li a span{display: none;}
+}
+
+.App-logo {
+  height: 50px;
+  pointer-events: none;
+}
+
+footer{
+  height: 90px; padding: 15px 0;
+  line-height: 30px;
+  background: #000000;
+  display: flex; align-items: center;justify-content: center;
+}
+footer img{margin: 0; padding: 0;text-align: center;height: 40px;}
+footer p{margin: 0; padding: 0;text-align: center;color: #ffffff; line-height: 20px;text-align: center;}
+footer p a{margin: 0 8px; padding: 0;color: #ffffff;font-weight: bold;}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 50px);
+}
+
+.Listing{
+    margin: 24px auto; padding: 16px 8px 24px 16px;
+    background: #ffffff;
+    max-width: 520px; box-shadow: 0 1px 6px #0000001a;
+  }
+  .Listing table{
+    width: 100%;
+    text-align: left;
+  }
+  .Listing table th, .Listing table td{vertical-align: top; line-height: 20px; padding: 8px 0 8px 0;}
+  .Listing table .line{ border-bottom:3px dashed #eeeeee; }
+  .Listing table a{ color: #00bcd4; }
+  .Listing table a:hover{ color: #ffbcd4; }
+
+  .manage{
+    margin: 24px auto; padding: 16px 8px 24px 16px;
+    max-width: 520px; text-align: center;
+  }
+  .manage button{
+    background-color: #00bcd4; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 24px; margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 130px;
+  }
+
+  .bookings{
+    margin: 24px auto; padding: 16px 8px 24px 16px;
+    max-width: 520px; text-align: center;
+  }
+  .bookings h2{margin: 8px 0;font-size: 18px;line-height: 30px;}
+  .bookings input{    line-height: 30px; margin: 8px auto; display: block;
+    padding: 0 8px;
+    min-width: 240px;
+    outline: none;
+    border: 0px solid transparent; box-shadow: 0 1px 6px #0000001a;}
+  .picker{
+    max-width: 220px; text-align: center; margin: 0 auto;
+    overflow-y: scroll;
+    height: 280px;
+  }
+  .picker button, .slot{display: flex;width: 90%; margin: 8px; line-height: 30px;}
+  .picker button{font-size: 20px;background: transparent;border: 3px dotted #ffbcd4;cursor: pointer;outline: none;opacity: 0.8;}
+  .picker button:hover{border: 3px dotted #eeeeee;opacity: 1;}
+  .picker button.active{font-size: 20px;background: #00bcd4;color: #ffffff;border: 3px dotted transparent;}
+  .picker button svg{height: 30px;vertical-align: middle;}
+  .bookMe{display: block; margin: 8px auto; line-height: 30px;cursor: pointer;background: #ffffff;color: #000;border: 3px solid #00bcd4;opacity: 0.8;}
+  .bookMe:hover{opacity: 1; background: #00bcd4; color: #fff;}
+  .add2Google{display: block; margin: 0 0 -24px auto; line-height: 30px;cursor: pointer;background: #ffffff;color: #000;border: 3px solid #ffbcd4;opacity: 0.8;font-weight: bold; border-radius: 24px; padding: 0 24px;}
+  .add2Google:hover{opacity: 1; background: #ffbcd4;}
+  .loader{display: flex; align-items: center; justify-content: center;height: calc(100vh - 50px);}
+  .loaderLittle{height: 240px;}
+  .loader svg{height: 80px;margin: 0 auto 24px auto;display: block;animation: star infinite 3s; fill: #00bcd4;}
+  .loader p{font-weight: bold;}
+  @keyframes star {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+  }
